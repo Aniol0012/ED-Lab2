@@ -45,6 +45,6 @@ public class Partitions2 {
 
     private static int partitionsIter(int n, int minAddend) {
         assert n > 0 && minAddend > 0;
-        throw new UnsupportedOperationException("Not implemented");
+        throw new UnsupportedOperationException("Not implemented v2");
     }
 }
