@@ -14,13 +14,24 @@ import java.util.NoSuchElementException;
  * @see Stack
  */
 public class LinkedStack<E> implements Stack<E> {
-    private LinkedList<E> list;
+    private LinkedList<E> list; // Check
+    private Node<E> top;
+    private int size;
+    private static class Node<E> {
+        E data;
+        Node<E> next;
+
+        Node(E data) {
+            this.data = data;
+        }
+    }
 
     /**
      * Creates an empty stack.
      */
-    public LinkedStack() {
-        this.list = new LinkedList<>();
+    public LinkedStack() { // Check
+        this.size = 0;
+        this.top = null;
     }
 
     /**
@@ -30,7 +41,10 @@ public class LinkedStack<E> implements Stack<E> {
      */
     @Override
     public void push(E elem) {
-        list.addFirst(elem);
+        Node<E> node = new Node<>(elem);
+        node.next = top;
+        top = node;
+        size += 1;
     }
 
     /**
@@ -41,10 +55,10 @@ public class LinkedStack<E> implements Stack<E> {
      */
     @Override
     public E top() {
-        if (list.isEmpty()) {
+        if (top == null) {
             throw new NoSuchElementException("The stack is empty");
         } else {
-            return list.getFirst();
+            return top.data;
         }
     }
 
@@ -55,10 +69,11 @@ public class LinkedStack<E> implements Stack<E> {
      */
     @Override
     public void pop() {
-        if (list.isEmpty()) {
+        if (top == null) {
             throw new NoSuchElementException("The stack is empty");
         } else {
-            list.removeFirst();
+            top = top.next;
+            size -= 1;
         }
     }
 
@@ -69,10 +84,10 @@ public class LinkedStack<E> implements Stack<E> {
      */
     @Override
     public boolean isEmpty() {
-        return list.isEmpty();
+        return top == null;
     }
 
     public int getSize() {
-        return list.size();
+        return this.size;
     }
 }
