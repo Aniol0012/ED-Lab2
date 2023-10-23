@@ -14,7 +14,7 @@ import java.util.NoSuchElementException;
  * @see Stack
  */
 public class LinkedStack<E> implements Stack<E> {
-    private LinkedList<E> list; // Check
+    //private LinkedList<E> list; // Check
     private Node<E> top;
     private int size;
     private static class Node<E> {
