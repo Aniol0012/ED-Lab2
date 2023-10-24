@@ -17,11 +17,14 @@ public class LinkedStack<E> implements Stack<E> {
     private Node<E> top;
     private int size;
     private static class Node<E> {
-        E data;
+        E element;
+        Node<E> prev;
         Node<E> next;
 
-        Node(E data) {
-            this.data = data;
+        Node(E element, Node<E> prev, Node<E> next) {
+            this.element = element;
+            this.prev = prev;
+            this.next = next;
         }
     }
 
@@ -40,11 +43,14 @@ public class LinkedStack<E> implements Stack<E> {
      */
     @Override
     public void push(E elem) {
-        Node<E> node = new Node<>(elem);
-        node.next = top;
+        Node<E> node = new Node<>(elem, null, top);
+        if (top != null) {
+            top.prev = node;
+        }
         top = node;
         size += 1;
     }
+
 
     /**
      * Returns the element at the top of the stack.
@@ -57,7 +63,7 @@ public class LinkedStack<E> implements Stack<E> {
         if (top == null) {
             throw new NoSuchElementException("The stack is empty");
         } else {
-            return top.data;
+            return top.element;
         }
     }
 
