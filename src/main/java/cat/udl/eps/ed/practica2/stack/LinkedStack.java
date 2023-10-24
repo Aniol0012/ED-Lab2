@@ -1,7 +1,5 @@
 package cat.udl.eps.ed.practica2.stack;
 
-import java.util.Deque;
-import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
 /**
