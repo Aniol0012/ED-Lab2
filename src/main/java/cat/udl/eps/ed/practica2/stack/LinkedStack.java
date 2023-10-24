@@ -14,7 +14,6 @@ import java.util.NoSuchElementException;
  * @see Stack
  */
 public class LinkedStack<E> implements Stack<E> {
-    //private LinkedList<E> list; // Check
     private Node<E> top;
     private int size;
     private static class Node<E> {
@@ -29,7 +28,7 @@ public class LinkedStack<E> implements Stack<E> {
     /**
      * Creates an empty stack.
      */
-    public LinkedStack() { // Check
+    public LinkedStack() {
         this.size = 0;
         this.top = null;
     }
