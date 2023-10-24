@@ -1,6 +1,5 @@
 package cat.udl.eps.ed.practica2.stack;
 
-import java.util.AbstractCollection;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
@@ -16,6 +15,7 @@ import java.util.NoSuchElementException;
 public class LinkedStack<E> implements Stack<E> {
     private Node<E> top;
     private int size;
+
     private static class Node<E> {
         E element;
         Node<E> prev;

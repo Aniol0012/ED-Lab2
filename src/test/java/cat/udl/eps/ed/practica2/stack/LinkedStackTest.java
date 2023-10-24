@@ -33,6 +33,7 @@ class LinkedStackTest {
 
     // pop() tests
     @Test
+    @SuppressWarnings("all")
     void pop_on_empty_stack_should_throw_nse_exception() {
         var emptyStack = new LinkedStack<Integer>();
         assertThrows(NoSuchElementException.class, () -> {
