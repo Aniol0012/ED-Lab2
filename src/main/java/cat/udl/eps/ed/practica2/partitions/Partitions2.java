@@ -3,6 +3,23 @@ package cat.udl.eps.ed.practica2.partitions;
 import cat.udl.eps.ed.practica2.stack.LinkedStack;
 
 public class Partitions2 {
+    private static class Context {
+        final int n;
+        int minAddend;
+        int count;
+        EntryPoint entryPoint;
+
+        public Context(int n, int minAddend) {
+            this.n = n;
+            this.minAddend = minAddend;
+            this.count = 0;
+            this.entryPoint = EntryPoint.CALL;
+        }
+    }
+
+    private enum EntryPoint {
+        CALL, RESUME;
+    }
 
     /**
      * Returns the number of partitions of n using a recursive algorithm.
@@ -45,6 +62,6 @@ public class Partitions2 {
 
     private static int partitionsIter(int n, int minAddend) {
         assert n > 0 && minAddend > 0;
-        throw new UnsupportedOperationException("Not implemented v3");
+        return 0;
     }
 }
