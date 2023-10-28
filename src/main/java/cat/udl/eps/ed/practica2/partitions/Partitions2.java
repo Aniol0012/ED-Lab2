@@ -66,11 +66,11 @@ public class Partitions2 {
         LinkedStack<Context> stack = new LinkedStack<>();
         stack.push(new Context(n, 1, EntryPoint.CALL));
 
-        int finalResult = 0;
+        int result_ = 0;
 
         while (!stack.isEmpty()) {
             Context currentContext = stack.top();
-            stack.pop();  // Remove the current context to allow updating
+            stack.pop();
 
             if (currentContext.entryPoint == EntryPoint.CALL) {
                 if (currentContext.minAddend > currentContext.n) {
@@ -78,14 +78,23 @@ public class Partitions2 {
                 } else if (currentContext.minAddend == currentContext.n) {
                     currentContext.count = 1;
                 } else {
-                    stack.push(new Context(currentContext.n, currentContext.minAddend + 1, EntryPoint.RECURSIVE));
-                    stack.push(new Context(currentContext.n - currentContext.minAddend, currentContext.minAddend, EntryPoint.RECURSIVE));
+                    Context rightContext = new Context(currentContext.n, currentContext.minAddend + 1, EntryPoint.CALL);
+                    Context leftContext = new Context(currentContext.n - currentContext.minAddend, currentContext.minAddend, EntryPoint.CALL);
+                    currentContext.entryPoint = EntryPoint.RECURSIVE;
+                    stack.push(currentContext);
+                    stack.push(rightContext);
+                    stack.push(leftContext);
+                    continue;
                 }
-                finalResult += currentContext.count;
             } else if (currentContext.entryPoint == EntryPoint.RECURSIVE) {
-                finalResult += currentContext.count;
+                if (!stack.isEmpty()) { // We need to check if stack is empty
+                    Context parentContext = stack.top();
+                    parentContext.count += currentContext.count;
+                }
             }
+
+            result_ += currentContext.count;
         }
-        return finalResult;
+        return result_;
     }
 }
