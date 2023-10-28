@@ -9,16 +9,17 @@ public class Partitions2 {
         int count;
         EntryPoint entryPoint;
 
-        public Context(int n, int minAddend) {
+        public Context(int n, int minAddend, EntryPoint entryPoint) {
             this.n = n;
             this.minAddend = minAddend;
             this.count = 0;
-            this.entryPoint = EntryPoint.CALL;
+            this.entryPoint = entryPoint;
         }
     }
 
     private enum EntryPoint {
-        CALL, RESUME;
+        CALL,
+        RECURSIVE
     }
 
     /**
@@ -62,6 +63,29 @@ public class Partitions2 {
 
     private static int partitionsIter(int n, int minAddend) {
         assert n > 0 && minAddend > 0;
-        return 0;
+        LinkedStack<Context> stack = new LinkedStack<>();
+        stack.push(new Context(n, 1, EntryPoint.CALL));
+
+        int finalResult = 0;
+
+        while (!stack.isEmpty()) {
+            Context currentContext = stack.top();
+            stack.pop();  // Remove the current context to allow updating
+
+            if (currentContext.entryPoint == EntryPoint.CALL) {
+                if (currentContext.minAddend > currentContext.n) {
+                    currentContext.count = 0;
+                } else if (currentContext.minAddend == currentContext.n) {
+                    currentContext.count = 1;
+                } else {
+                    stack.push(new Context(currentContext.n, currentContext.minAddend + 1, EntryPoint.RECURSIVE));
+                    stack.push(new Context(currentContext.n - currentContext.minAddend, currentContext.minAddend, EntryPoint.RECURSIVE));
+                }
+                finalResult += currentContext.count;
+            } else if (currentContext.entryPoint == EntryPoint.RECURSIVE) {
+                finalResult += currentContext.count;
+            }
+        }
+        return finalResult;
     }
 }
