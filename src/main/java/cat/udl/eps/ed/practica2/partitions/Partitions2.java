@@ -6,20 +6,21 @@ public class Partitions2 {
     private static class Context {
         final int n;
         int minAddend;
-        int count;
+        int f1;
+        int f2;
         EntryPoint entryPoint;
 
-        public Context(int n, int minAddend, EntryPoint entryPoint) {
+        public Context(int n, int minAddend) {
             this.n = n;
+            this.f1 = 0;
+            this.f2 = 0;
             this.minAddend = minAddend;
-            this.count = 0;
-            this.entryPoint = entryPoint;
+            this.entryPoint = EntryPoint.CALL;
         }
     }
 
     private enum EntryPoint {
-        CALL,
-        RECURSIVE
+        CALL, RESUME1, RESUME2
     }
 
     /**
@@ -61,40 +62,39 @@ public class Partitions2 {
         return partitionsIter(n, 1);
     }
 
+    @SuppressWarnings("all")
     private static int partitionsIter(int n, int minAddend) {
         assert n > 0 && minAddend > 0;
-        LinkedStack<Context> stack = new LinkedStack<>();
-        stack.push(new Context(n, 1, EntryPoint.CALL));
-
-        int result_ = 0;
-
+        int return_ = 0;
+        var stack = new LinkedStack<Context>();
+        stack.push(new Context(n, minAddend));
         while (!stack.isEmpty()) {
-            Context currentContext = stack.top();
-            stack.pop();
-
-            if (currentContext.entryPoint == EntryPoint.CALL) {
-                if (currentContext.minAddend > currentContext.n) {
-                    currentContext.count = 0;
-                } else if (currentContext.minAddend == currentContext.n) {
-                    currentContext.count = 1;
-                } else {
-                    Context rightContext = new Context(currentContext.n, currentContext.minAddend + 1, EntryPoint.CALL);
-                    Context leftContext = new Context(currentContext.n - currentContext.minAddend, currentContext.minAddend, EntryPoint.CALL);
-                    currentContext.entryPoint = EntryPoint.RECURSIVE;
-                    stack.push(currentContext);
-                    stack.push(rightContext);
-                    stack.push(leftContext);
-                    continue;
+            var context = stack.top();
+            switch (context.entryPoint) {
+                case CALL -> {
+                    if (context.n == context.minAddend) {
+                        return_ = 1;
+                        stack.pop();
+                    } else if (context.n < context.minAddend) {
+                        return_ = 0;
+                        stack.pop();
+                    } else {
+                        context.entryPoint = EntryPoint.RESUME1;
+                        stack.push(new Context(context.n - context.minAddend, context.minAddend));
+                    }
                 }
-            } else if (currentContext.entryPoint == EntryPoint.RECURSIVE) {
-                if (!stack.isEmpty()) { // We need to check if stack is empty
-                    Context parentContext = stack.top();
-                    parentContext.count += currentContext.count;
+                case RESUME1 -> {
+                    context.f1 = return_;
+                    context.entryPoint = EntryPoint.RESUME2;
+                    stack.push(new Context(context.n, context.minAddend + 1));
+                }
+                case RESUME2 -> {
+                    context.f2 = return_;
+                    return_ = context.f1 + context.f2;
+                    stack.pop();
                 }
             }
-
-            result_ += currentContext.count;
         }
-        return result_;
+        return return_;
     }
 }
