@@ -57,6 +57,12 @@ public class Partitions2 {
      * @param n the number to be partitioned
      * @return the number of partitions of n
      */
+    public static int partitionsIter(int n) {
+        assert n > 0;
+        return partitionsIter(n, 1);
+    }
+
+    @SuppressWarnings("all")
     private static int partitionsIter(int n, int minAddend) {
         assert n > 0 && minAddend > 0;
         int return_ = 0;
@@ -90,10 +96,5 @@ public class Partitions2 {
             }
         }
         return return_;
-    }
-
-    public static int partitionsIter(int n) {
-        assert n > 0;
-        return partitionsIter(n, 1);
     }
 }
