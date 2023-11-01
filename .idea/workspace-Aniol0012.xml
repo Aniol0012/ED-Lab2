@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7b289c19-3fe8-4c89-8d14-0e26eaed8f15" name="Changes" comment="feat: Add context class">
+      <change beforePath="$PROJECT_DIR$/target/classes/cat/udl/eps/ed/practica2/partitions/Partitions2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cat/udl/eps/ed/practica2/stack/LinkedStack$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cat/udl/eps/ed/practica2/stack/LinkedStack$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cat/udl/eps/ed/practica2/stack/LinkedStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cat/udl/eps/ed/practica2/stack/LinkedStack.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2WVxRCvnhYvCtLMICZeGMgEgLx8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/aniol/OneDrive/UNI/2n/1r Quatri/Estructures de Dades/1. Laboratorio/Laboratorio1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.32873562",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/cat/udl/eps/ed/practica2" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="cat.udl.eps.ed.stack" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="cat.udl.eps.ed.practica2.stack" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.Partitions2Test">
+    <configuration name="All in practica2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practica2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedStackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practica2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cat.udl.eps.ed.practica2.stack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cat.udl.eps.ed.practica2.stack" />
+      <option name="MAIN_CLASS_NAME" value="cat.udl.eps.ed.practica2.stack.LinkedStackTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedStackTest.top_on_2_element_stack_should_return_second_element_and_stack_non_empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practica2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cat.udl.eps.ed.practica2.stack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cat.udl.eps.ed.practica2.stack" />
+      <option name="MAIN_CLASS_NAME" value="cat.udl.eps.ed.practica2.stack.LinkedStackTest" />
+      <option name="METHOD_NAME" value="top_on_2_element_stack_should_return_second_element_and_stack_non_empty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedStackTest.top_on_filled_stack_should_return_top_element" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practica2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cat.udl.eps.ed.practica2.stack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cat.udl.eps.ed.practica2.stack" />
+      <option name="MAIN_CLASS_NAME" value="cat.udl.eps.ed.practica2.stack.LinkedStackTest" />
+      <option name="METHOD_NAME" value="top_on_filled_stack_should_return_top_element" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Partitions2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practica2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cat.udl.eps.ed.practica2.partitions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cat.udl.eps.ed.practica2.partitions" />
+      <option name="MAIN_CLASS_NAME" value="cat.udl.eps.ed.practica2.partitions.Partitions2Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.All in practica2" />
+      <item itemvalue="JUnit.LinkedStackTest" />
+      <item itemvalue="JUnit.LinkedStackTest.top_on_2_element_stack_should_return_second_element_and_stack_non_empty" />
+      <item itemvalue="JUnit.LinkedStackTest.top_on_filled_stack_should_return_top_element" />
+      <item itemvalue="JUnit.Partitions2Test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Partitions2Test" />
+        <item itemvalue="JUnit.LinkedStackTest" />
+        <item itemvalue="JUnit.All in practica2" />
+        <item itemvalue="JUnit.LinkedStackTest.top_on_2_element_stack_should_return_second_element_and_stack_non_empty" />
+        <item itemvalue="JUnit.LinkedStackTest.top_on_filled_stack_should_return_top_element" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b289c19-3fe8-4c89-8d14-0e26eaed8f15" name="Changes" comment="" />
+      <created>1696831540209</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696831540209</updated>
+      <workItem from="1697965570894" duration="930000" />
+      <workItem from="1697967422947" duration="15314000" />
+      <workItem from="1698065982035" duration="1066000" />
+      <workItem from="1698166003057" duration="3958000" />
+      <workItem from="1698350807118" duration="115000" />
+      <workItem from="1698356751544" duration="1361000" />
+    </task>
+    <task id="LOCAL-00001" summary="Stack now uses node. Needs revision.">
+      <option name="closed" value="true" />
+      <created>1698066906452</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698066906452</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Removed comments">
+      <option name="closed" value="true" />
+      <created>1698166314540</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698166314541</updated>
+    </task>
+    <task id="LOCAL-00003" summary="New node implementation">
+      <option name="closed" value="true" />
+      <created>1698167349985</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698167349985</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Few tweaks and small improvements">
+      <option name="closed" value="true" />
+      <created>1698168139240</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698168139240</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Few tweaks and small improvements">
+      <option name="closed" value="true" />
+      <created>1698168422980</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698168422980</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: Add context class">
+      <option name="closed" value="true" />
+      <created>1698357958155</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698357958155</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Stack now uses node. Needs revision." />
+    <MESSAGE value="Removed comments" />
+    <MESSAGE value="New node implementation" />
+    <MESSAGE value="Few tweaks and small improvements" />
+    <MESSAGE value="feat: Add context class" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add context class" />
+  </component>
+</project>
