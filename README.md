@@ -25,7 +25,7 @@ git clone https://github.com/Aniol0012/ED-Lab2.git
 
 ## Tests
 
-There are 2 type of tests, one for `LinkedStack<E>` and the other one for [`Partitions2`]:
+There are 2 type of tests, one for `LinkedStack<E>` and the other one for `Partitions2`:
 
 - [LinkedStackTest](src/test/java/cat/udl/eps/ed/practica2/stack/LinkedStackTest.java)
 - [Partitions2Test](src/test/java/cat/udl/eps/ed/practica2/partitions/Partitions2Test.java)
