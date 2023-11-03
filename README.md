@@ -1,5 +1,15 @@
 # ED-Lab2
 
+## Table of Contents
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Tests](#tests)
+4. [Usage](#usage)
+    - [LinkedStack](#linkedstack)
+    - [Partitions2](#partitions2)
+5. [Authors](#authors)
+
+
 ## Description
 
 This project implements a stack in Java called `LinkedStack<E>` using nodes in [LinkedStack](src/main/java/cat/udl/eps/ed/practica2/stack/LinkedStack.java) file. <br>
