@@ -12,8 +12,8 @@
 
 ## Description
 
-This project implements a stack in Java called `LinkedStack<E>` using nodes in [LinkedStack](src/main/java/cat/udl/eps/ed/practica2/stack/LinkedStack.java) file. <br>
-It also calculate partitions of a number in [Partition2](src/main/java/cat/udl/eps/ed/practica2/partitions/Partitions2.java) file.
+This project implements a stack in Java called `LinkedStack<E>` using nodes. You can check it in [LinkedStack](src/main/java/cat/udl/eps/ed/practica2/stack/LinkedStack.java) file. <br>
+It also calculates partitions of a number in [Partition2](src/main/java/cat/udl/eps/ed/practica2/partitions/Partitions2.java) file.
 
 ## Installation
 Clone the repo:
